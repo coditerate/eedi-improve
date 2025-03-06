@@ -5,7 +5,7 @@ This is an API project for a new feature  in the Eedi product, and spec out the 
 - Teachers would like a new section that allows students to independently review and re-answer questions that they have previously answered incorrectly.
 - This will be useful if there is a student who has completed their assigned in class work quickly and the teacher wants to give them extra work to do.
 - A student should be able to view the topics where they have incorrect answers, select a topic, view questions again, and update their previous answer.
-- We’re calling this section <b>`Improve`</b>.
+- We’re calling this section `Improve`.
 - In Figma, you'll see a [proposed design and flow for the improve section](https://www.figma.com/design/cBhoA2SdIGTQgDpm2jj9cu/Improve?node-id=0-1&m=dev&t=etApngCTOKBm7hsM-1).
 
 ## ui design
@@ -136,25 +136,29 @@ https://{domain}/{studentId}/improve/{topicId}/{subTopicId}
 - I did so with the belief that it's good for the morale of the students to see what they were successful in, instead of showing them only those things where they went wrong.
 - I've put a `TODO` comment in the code where this logic could potentially be applied, should this requirement be non-negotiable.
 
-#### repository, student data samples & chat-gpt
-- Considering the requirement was only for the API and the data structures, and for sake of expediency, I used plain `json` files to store and work with a student's data.
+#### student data samples & chatgpt
+- Considering the requirement was only for the API and the data structures, and for the sake of expediency, I used plain `json` files to store and work with a student's data.
 - This is stored in the DataFiles folder, with each json file named after the `StudentId` guid.
 - Only used a couple of data files to keep things simple, and for ease of testing.
 - Admittedly, ChatGPT was used to generate this data for testing and playing around with.
-- :bell: <b>Rest assured, the actual code & logic was ALL a spawn of my brain - so if anyone is to blame for anything incorrect/dumb you find, IT'S ME.</b>
-- The `Repository` was admittedly a big bodge job - however due to reasons mentioned above, I deemed it was important to focus on the job at hand. A functional repository should be easy to plug-in, once a suitable datastore is agreed upon.
+- :bell: <b>Rest assured, the actual code & logic was ALL a spawn of my brain - so if anyone's to blame for anything you find incorrect or even dumb, IT'S ME.</b>
+
+#### repository project
+- The `Repository` project was admittedly a big bodge job overall - however due to reasons mentioned above, I deemed it was important to focus on the job at hand.
+- A functional repository should be easy to plug-in, once a suitable datastore is agreed upon.
 
 #### unit tests
-- Normally, I would write unit tests covering the happy paths, unhappy paths, and some edge-cases too.
-- However, time constraints did not allow for it this time.
+- Normally, I would write unit tests covering the happy paths, unhappy paths, and as many edge-cases as I can think of.
+- However, time constraints did not allow for it on this occasion.
 
 #### further work
 - Considering how much fun this little project is, I expect I'll be revisiting this repository to write some unit tests.
-- <b>I will perhaps even write a quick SPA app to make this a complete all-round stand-alone solution (currently learning React/Typscript, so I'll probably use that for the UI).</b>
-- <b>All going well, if nothing else, I hope my 8-year-old can have fun learning/playing.</b>
+- <b>I will perhaps even write a quick SPA to make this a complete all-round stand-alone solution.</b>
+- I'm currently in the process of learning React/Typscript, so I'll probably use that for the UI.
+- <b>All going well, if nothing else, I'm sure my 8-year-old will have some fun learning/playing with it.</b>
 
 ## swagger
-- Swagger UI is available on a deployed application which provides access to the full documentation of this API solution.
-- Its "Try It Out" feature allows you to call this API, without the need for another tool.
+- Swagger UI loads up when this solution is fired up, and it provides access to the full documentation of this API solution.
+- Its "Try It Out" feature allows you to call this API, without the need for another tool - although, I did use Postman to test the functionality.
 </br></br>
   <p align="center"><img width=500px src="images/swagger-ui.jpg"></p>

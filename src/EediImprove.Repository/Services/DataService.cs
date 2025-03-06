@@ -8,6 +8,9 @@ public class DataService : IDataService
     public async Task<StudentTopics?> GetStudentTopics(string studentId)
     {
         var studentTopics = await Get(studentId);
+        
+        // TODO: remove sub-topics which have zero total misconceptions.
+        // TODO: following the above removal, possibly also then remove the topics where no sub-topics remain.
 
         foreach (var subTopic in (studentTopics?.AllocatedTopics!).SelectMany(topic => topic.SubTopics!))
         {
@@ -20,7 +23,6 @@ public class DataService : IDataService
     public async Task<SubTopic?> GetSubTopic(string studentId, int topicId, int subTopicId)
     {
         var studentTopics = await Get(studentId);
-
         var topic = studentTopics!.AllocatedTopics!.Find(i => i.TopicId == topicId);
         var subTopic = topic!.SubTopics!.Find(i => i.SubTopicId == subTopicId);
 
@@ -41,16 +43,10 @@ public class DataService : IDataService
 
         savedSubTopic!.TotalMisconceptions = updatedSubTopic!.Questions!.Where(i => i.SelectedAnswerId != i.CorrectAnswerId)!.Count();
 
-        var pathToFile = $"./DataFiles/{studentId}.json";
-        var options = new JsonSerializerOptions
-        {
-            WriteIndented = true // This enables the pretty print (indented formatting)
-        };
-
-        var jsonString = JsonSerializer.Serialize(studentTopics, options);
+        var jsonString = JsonSerializer.Serialize(studentTopics, new JsonSerializerOptions { WriteIndented = true });
 
         // Write the JSON string to a file
-        await File.WriteAllTextAsync(pathToFile, jsonString);
+        await File.WriteAllTextAsync($"./DataFiles/{studentId}.json", jsonString);
 
         return await GetStudentTopics(studentId);
     }
@@ -61,7 +57,6 @@ public class DataService : IDataService
         {
             using StreamReader reader = new($"./DataFiles/{studentId}.json");
             var text = await reader.ReadToEndAsync();
-
             var studentTopics = JsonSerializer.Deserialize<StudentTopics>(text);
 
             return studentTopics;
