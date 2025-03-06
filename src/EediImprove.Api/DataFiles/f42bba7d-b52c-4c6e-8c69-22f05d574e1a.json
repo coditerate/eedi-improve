@@ -1,0 +1,265 @@
+{
+  "StudentId": "f42bba7d-b52c-4c6e-8c69-22f05d574e1a",
+  "AllocatedTopics": [
+    {
+      "TopicId": 1,
+      "TopicName": "Basic Math",
+      "SubTopics": [
+        {
+          "SubTopicId": 1,
+          "SubTopicName": "Addition and Subtraction",
+          "TotalMisconceptions": 3,
+          "Questions": [
+            {
+              "QuestionId": 1,
+              "QuestionDescription": "What is 3 \u002B 5?",
+              "AnswerA": {
+                "AnswerId": 1,
+                "AnswerExplanation": "8"
+              },
+              "AnswerB": {
+                "AnswerId": 2,
+                "AnswerExplanation": "7"
+              },
+              "AnswerC": {
+                "AnswerId": 3,
+                "AnswerExplanation": "9"
+              },
+              "AnswerD": {
+                "AnswerId": 4,
+                "AnswerExplanation": "6"
+              },
+              "CorrectAnswerId": 1,
+              "SelectedAnswerId": 2
+            },
+            {
+              "QuestionId": 2,
+              "QuestionDescription": "What is 10 - 4?",
+              "AnswerA": {
+                "AnswerId": 1,
+                "AnswerExplanation": "6"
+              },
+              "AnswerB": {
+                "AnswerId": 2,
+                "AnswerExplanation": "5"
+              },
+              "AnswerC": {
+                "AnswerId": 3,
+                "AnswerExplanation": "7"
+              },
+              "AnswerD": {
+                "AnswerId": 4,
+                "AnswerExplanation": "8"
+              },
+              "CorrectAnswerId": 1,
+              "SelectedAnswerId": 3
+            },
+            {
+              "QuestionId": 3,
+              "QuestionDescription": "What is 7 \u002B 4?",
+              "AnswerA": {
+                "AnswerId": 1,
+                "AnswerExplanation": "11"
+              },
+              "AnswerB": {
+                "AnswerId": 2,
+                "AnswerExplanation": "10"
+              },
+              "AnswerC": {
+                "AnswerId": 3,
+                "AnswerExplanation": "9"
+              },
+              "AnswerD": {
+                "AnswerId": 4,
+                "AnswerExplanation": "12"
+              },
+              "CorrectAnswerId": 1,
+              "SelectedAnswerId": 2
+            }
+          ]
+        },
+        {
+          "SubTopicId": 2,
+          "SubTopicName": "Simple Shapes and Patterns",
+          "TotalMisconceptions": 0,
+          "Questions": [
+            {
+              "QuestionId": 4,
+              "QuestionDescription": "How many sides does a triangle have?",
+              "AnswerA": {
+                "AnswerId": 1,
+                "AnswerExplanation": "3"
+              },
+              "AnswerB": {
+                "AnswerId": 2,
+                "AnswerExplanation": "4"
+              },
+              "AnswerC": {
+                "AnswerId": 3,
+                "AnswerExplanation": "5"
+              },
+              "AnswerD": {
+                "AnswerId": 4,
+                "AnswerExplanation": "6"
+              },
+              "CorrectAnswerId": 1,
+              "SelectedAnswerId": 1
+            },
+            {
+              "QuestionId": 5,
+              "QuestionDescription": "Which shape has 4 equal sides?",
+              "AnswerA": {
+                "AnswerId": 1,
+                "AnswerExplanation": "Square"
+              },
+              "AnswerB": {
+                "AnswerId": 2,
+                "AnswerExplanation": "Triangle"
+              },
+              "AnswerC": {
+                "AnswerId": 3,
+                "AnswerExplanation": "Circle"
+              },
+              "AnswerD": {
+                "AnswerId": 4,
+                "AnswerExplanation": "Rectangle"
+              },
+              "CorrectAnswerId": 1,
+              "SelectedAnswerId": 4
+            },
+            {
+              "QuestionId": 6,
+              "QuestionDescription": "Which shape has no corners?",
+              "AnswerA": {
+                "AnswerId": 1,
+                "AnswerExplanation": "Circle"
+              },
+              "AnswerB": {
+                "AnswerId": 2,
+                "AnswerExplanation": "Square"
+              },
+              "AnswerC": {
+                "AnswerId": 3,
+                "AnswerExplanation": "Triangle"
+              },
+              "AnswerD": {
+                "AnswerId": 4,
+                "AnswerExplanation": "Rectangle"
+              },
+              "CorrectAnswerId": 1,
+              "SelectedAnswerId": 2
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "TopicId": 2,
+      "TopicName": "Measurement and Time",
+      "SubTopics": [
+        {
+          "SubTopicId": 1,
+          "SubTopicName": "Measuring Length",
+          "TotalMisconceptions": 1,
+          "Questions": [
+            {
+              "QuestionId": 7,
+              "QuestionDescription": "Which one is longer: a pencil or a ruler?",
+              "AnswerA": {
+                "AnswerId": 1,
+                "AnswerExplanation": "Ruler"
+              },
+              "AnswerB": {
+                "AnswerId": 2,
+                "AnswerExplanation": "Pencil"
+              },
+              "AnswerC": {
+                "AnswerId": 3,
+                "AnswerExplanation": "They are the same length"
+              },
+              "AnswerD": {
+                "AnswerId": 4,
+                "AnswerExplanation": "None"
+              },
+              "CorrectAnswerId": 1,
+              "SelectedAnswerId": 1
+            },
+            {
+              "QuestionId": 8,
+              "QuestionDescription": "Which object is shorter than a pencil?",
+              "AnswerA": {
+                "AnswerId": 1,
+                "AnswerExplanation": "Eraser"
+              },
+              "AnswerB": {
+                "AnswerId": 2,
+                "AnswerExplanation": "Ruler"
+              },
+              "AnswerC": {
+                "AnswerId": 3,
+                "AnswerExplanation": "Book"
+              },
+              "AnswerD": {
+                "AnswerId": 4,
+                "AnswerExplanation": "Chair"
+              },
+              "CorrectAnswerId": 1,
+              "SelectedAnswerId": 3
+            }
+          ]
+        },
+        {
+          "SubTopicId": 2,
+          "SubTopicName": "Telling Time",
+          "TotalMisconceptions": 1,
+          "Questions": [
+            {
+              "QuestionId": 9,
+              "QuestionDescription": "What time is it if the clock shows 3:00?",
+              "AnswerA": {
+                "AnswerId": 1,
+                "AnswerExplanation": "3 o\u0027clock"
+              },
+              "AnswerB": {
+                "AnswerId": 2,
+                "AnswerExplanation": "6 o\u0027clock"
+              },
+              "AnswerC": {
+                "AnswerId": 3,
+                "AnswerExplanation": "12 o\u0027clock"
+              },
+              "AnswerD": {
+                "AnswerId": 4,
+                "AnswerExplanation": "1 o\u0027clock"
+              },
+              "CorrectAnswerId": 1,
+              "SelectedAnswerId": 1
+            },
+            {
+              "QuestionId": 10,
+              "QuestionDescription": "What time is it if the clock shows 9:00?",
+              "AnswerA": {
+                "AnswerId": 1,
+                "AnswerExplanation": "9 o\u0027clock"
+              },
+              "AnswerB": {
+                "AnswerId": 2,
+                "AnswerExplanation": "6 o\u0027clock"
+              },
+              "AnswerC": {
+                "AnswerId": 3,
+                "AnswerExplanation": "12 o\u0027clock"
+              },
+              "AnswerD": {
+                "AnswerId": 4,
+                "AnswerExplanation": "3 o\u0027clock"
+              },
+              "CorrectAnswerId": 1,
+              "SelectedAnswerId": 4
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
