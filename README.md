@@ -143,7 +143,7 @@ Based on the design and requirements, you will need to do the following.
 - This is stored in the DataFiles folder, with each json file named after the `StudentId` guid.
 - Only used a couple of data files to keep things simple, and for ease of testing.
 - Admittedly, ChatGPT was used to generate this data for testing and playing around with.
-- :bell: Rest assured, the actual code & logic was ALL a spawn of my brain - so if anyone is to blame for anything incorrect/dumb you find, IT'S ME.
+- :bell: <b>Rest assured, the actual code & logic was ALL a spawn of my brain - so if anyone is to blame for anything incorrect/dumb you find, IT'S ME.</b>
 
 #### unit tests
 - Normally, I would write unit tests covering the happy paths, unhappy paths, and some edge-cases too.
@@ -151,7 +151,7 @@ Based on the design and requirements, you will need to do the following.
 
 #### further work
 - Considering how much fun this little project is, I expect I'll be revisiting this repository to write some unit tests.
-- I will perhaps even write a quick SPA app to make this a complete all-round stand-alone solution (I'm currently learning React/Typscript, so probably use that) - which, all going well, my 8-year-old can have fun learning/playing, if nothing else.
+- <b>I will perhaps even write a quick SPA app to make this a complete all-round stand-alone solution (I'm currently learning React/Typscript, so probably use that) - which, all going well, my 8-year-old can have fun learning/playing, if nothing else.</b>
 
 ## swagger
 - Swagger UI is available on a deployed application which provides access to the full documentation of this API solution.
