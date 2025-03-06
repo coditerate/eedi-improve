@@ -8,12 +8,6 @@ This is an API project for a new feature  in the Eedi product, and spec out the 
 - We’re calling this section `Improve`.
 - In Figma, you'll see a [proposed design and flow for the improve section](https://www.figma.com/design/cBhoA2SdIGTQgDpm2jj9cu/Improve?node-id=0-1&m=dev&t=etApngCTOKBm7hsM-1).
 
-## ui design
-<img width=350px src="images/improve-page.jpg">
-<img width=350px src="images/question-page-correct.jpg">
-<img width=350px src="images/question-page-incorrect.jpg">
-<img width=350px src="images/ui-components.jpg">
-
 ## list page
 This section lists topics and sub-topics where the current student has misconceptions.
 - It should list sub-topics grouped by their parent topic.
@@ -162,3 +156,14 @@ https://{domain}/{studentId}/improve/{topicId}/{subTopicId}
 - Its "Try It Out" feature allows you to call this API, without the need for another tool - although, I did use Postman to test the functionality.
 </br></br>
   <p align="center"><img width=500px src="images/swagger-ui.jpg"></p>
+
+## ui design
+These are the design concept images provided in the figma link.
+</br></br>
+<img width=350px src="images/improve-page.jpg">
+<img width=350px src="images/question-page-correct.jpg">
+<img width=350px src="images/question-page-incorrect.jpg">
+<img width=350px src="images/ui-components.jpg">
+
+## project structure diagram
+<p align="center"><img width=600px src="images/project-structure.jpg"></p>
