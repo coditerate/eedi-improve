@@ -11,7 +11,9 @@ public class DataService : IDataService
         
         // TODO: remove sub-topics which have zero total misconceptions.
         // TODO: following the above removal, possibly also then remove the topics where no sub-topics remain.
-
+        
+        // Ideally, the below can be avoided, depending on how the data is stored in the DB.
+        // Because I've used a blob of json, this will need to be done in order to remove the questions when a list of topics/sub-topics is requested.
         foreach (var subTopic in (studentTopics?.AllocatedTopics!).SelectMany(topic => topic.SubTopics!))
         {
             subTopic.Questions = null;

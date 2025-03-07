@@ -1,5 +1,5 @@
 # eedi-improve
-This is an API project for a new feature  in the Eedi product, and spec out the data structures and the endpoints that will allow a frontend engineer to implement it.
+An API project for a new feature in the Eedi product-base, implementing the data structures and the endpoints that will allow a frontend engineer to implement it.
 
 ## improve feature
 - Teachers would like a new section that allows students to independently review and re-answer questions that they have previously answered incorrectly.
@@ -34,7 +34,7 @@ A single API endpoint with 3 methods, utilising 2 verbs - `GET` & `PATCH`.
 https://{domain}/{studentId}/improve
 ```
 - This serves the initial page load, which lists all topics allocated to the student & the underlying sub-topics.
-- :bell: The list of questions is not provided in the sub-topics, as they're not really needed for the initial page; only required when a student wants to revisit a sub-topic.
+- :bell: The list of questions per sub-topics as part of the resultant dataset, as they're not really needed for the initial page; only required when a student wants to revisit a sub-topic.
 - This should also help with the latency, because the questions are supposed to be images and it made sense to load the necessary ones and only when needed i.e., in the next `GET` call where a student chooses a sub-topic to work on.
     <details>
     <summary><ins style="cursor: pointer">Expand for an example result</ins></summary>
@@ -75,8 +75,8 @@ https://{domain}/{studentId}/improve/{topicId}/{subTopicId}
 ```
 - This is to be called when a student selects a sub-topic to correct previously-incorrect answers.
 - This endpoint method returns a list of all questions pertaining to the chosen sub-topic, along with all the corresponding necessary details.
-- :bell: Generally speaking, the list of questions could've been array of questions, and not just limited to the 4 options i.e., A, B, C & D. Also, the Correct & Selected AnswerId could've been a list of `int`.
-- :bell: However, this would've been an expansion over the requirements, and I chose to stick to the exact requirements.
+- :bell: Generally speaking, the list of questions could've been array of questions, and not just limited to the 4 options i.e., A, B, C & D. Also, the Correct & Selected AnswerId could've been a list of `int`. This would ensure that there can more options and possibly, more than one correct answer.
+- :bell: However, this would've been an expansion over the requirements, and I chose to stick to the exact requirements in this area.
     <details>
     <summary><ins style="cursor: pointer">Expand for an example result</ins></summary>
 
@@ -119,31 +119,35 @@ https://{domain}/{studentId}/improve/{topicId}/{subTopicId}
 ```
 https://{domain}/{studentId}/improve/{topicId}/{subTopicId}
 ```
-- :bell: A big assumption at my end here was that there would be potentially a `Submit` button at the end of the questionnaire for each sub-topic.
-- This endpoint would be called on the click of the `Submit` button, and essentially save the data to the database of some sort.
-- Another assumption was that once a student clicks `Submit`, the natural next step would be land the student on the main `list` page with the latest data.
+- :bell: A big assumption at my end here was that there would potentially be a `Submit` button at the end of the questionnaire for each sub-topic.
+- This endpoint would be called on the click of the `Submit` button, to essentially save the data to a database of some sort.
+- Another assumption was that once a student clicks `Submit`, the natural next step would be to land the student on the main `list` page with the latest data.
 - With this in mind, this endpoint method was designed to return a list of all topics i.e., the first `GET` method.
 
 ## dev notes
 #### slight drift from requirements
 - In addition to the assumptions mentioned in the sections above, I drifted slightly from the requirements wherein the first `GET` call will return all sub-topics irrespective of any misconceptions.
-- I did so with the belief that it's good for the morale of the students to see what they were successful in, instead of showing them only those things where they went wrong.
-- I've put a `TODO` comment in the code where this logic could potentially be applied, should this requirement be non-negotiable.
+- I did so with the belief that it's good for the morale of the students to see what they were successful in, in addition to showing them only those things where they went wrong.
+- I've put a `TODO` comment in the code where this logic could be applied, should this requirement be non-negotiable.
 
 #### student data samples & chatgpt
 - Considering the requirement was only for the API and the data structures, and for the sake of expediency, I used plain `json` files to store and work with a student's data.
-- This is stored in the DataFiles folder, with each json file named after the `StudentId` guid.
+- This is stored in the `DataFiles` folder, with each json file named after the `StudentId` guid.
 - Only used a couple of data files to keep things simple, and for ease of testing.
 - Admittedly, ChatGPT was used to generate this data for testing and playing around with.
 - :bell: <b>Rest assured, the actual code & logic was ALL a spawn of my brain - so if anyone's to blame for anything you find incorrect or even dumb, IT'S ME.</b>
 
 #### repository project
-- The `Repository` project was admittedly a big bodge job overall - however due to reasons mentioned above, I deemed it was important to focus on the job at hand.
+- As you'll have noticed, the `Repository` project is clearly a big bodge job overall - however due to reasons mentioned above, I deemed it was important to focus on the job at hand.
 - A functional repository should be easy to plug-in, once a suitable datastore is agreed upon.
 
+#### using patch
+- The `PATCH` verb is used for updating a sub-topic.
+- The idea behind it was to eventually use something like [OData ](Microsoft.AspNetCore.OData) which allows for a `Delta`-set of the data to be patched, rather than using the full object.
+
 #### unit tests
-- Normally, I would write unit tests covering the happy paths, unhappy paths, and as many edge-cases as I can think of.
-- However, time constraints did not allow for it on this occasion.
+- Normally, I would write unit tests covering the happy paths, unhappy paths, and as many edge-cases as I could've thought of.
+- However, time constraints did not allow for it, on this occasion.
 
 #### further work
 - Considering how much fun this little project is, I expect I'll be revisiting this repository to write some unit tests.
@@ -153,7 +157,7 @@ https://{domain}/{studentId}/improve/{topicId}/{subTopicId}
 
 ## swagger
 - Swagger UI loads up when this solution is fired up, and it provides access to the full documentation of this API solution.
-- Its "Try It Out" feature allows you to call this API, without the need for another tool - although, I did use Postman to test the functionality.
+- Its "Try It Out" feature allows you to call this API, without the need for another tool - although, I did use Postman for the most part, to test the functionality.
 </br></br>
   <p align="center"><img width=500px src="images/swagger-ui.jpg"></p>
 
